@@ -38,7 +38,7 @@
       }
 
       body.loaded {
-        background-size: 400%;
+        background-size:200%;
         animation: logo-animation 60s infinite alternate,
           loading-background ease-in-out 0.6s;
       }
@@ -289,6 +289,14 @@
           box-shadow: #9b15ea 0px 0px 3px;
         }
       }
+
+      @media screen and (min-width: 600px) {
+  
+      body.loaded{
+        background-size: 100%;
+      }
+
+}
     </style>
   </head>
   <body>
@@ -363,7 +371,7 @@
         const body = document.querySelector("body");
         body.classList.add("loaded");
 
-        body.style.background =
+        body.style.backgroundImage =
           `url(${background.link})` || background.text || "#9b15ea";
 
         logo_element.setAttribute("href", account.link);
